@@ -13,7 +13,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".TranscoderActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +23,7 @@
         </activity>
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="net.ypresto.androidtranscoder.example.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
